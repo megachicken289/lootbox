@@ -1,6 +1,6 @@
 package abstractFactory;
 
-public class BedWetterDelight implements BaseBoxImpl
+public class BedWetterDelight implements BoxImpl
 {
 
     @Override
@@ -10,8 +10,51 @@ public class BedWetterDelight implements BaseBoxImpl
     }
 
     @Override
+    public double boxReward()
+    {
+        return 0;
+    }
+
+    @Override
+    public double boxCost()
+    {
+        return 0;
+    }
+
+    @Override
+    public double boxMinThreshold()
+    {
+        return 0;
+    }
+
+    @Override
+    public double boxMaxThreshold()
+    {
+        return 0;
+    }
+
+    @Override
+    public double boxChance()
+    {
+        return 0;
+    }
+
+    @Override
+    public double boxLuck()
+    {
+        return 0;
+    }
+
+    @Override
     public void showStats()
     {
 
     }
+
+    @Override
+    public void showHiddenStats()
+    {
+//        fu.boxHiddenStats(llb);
+    }
+
 }

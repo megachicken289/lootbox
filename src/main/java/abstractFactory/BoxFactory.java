@@ -5,7 +5,7 @@ import lootBoxes.Difficulty;
 public class BoxFactory
 {
     // use getBox method to get object of type box
-    public BaseBoxImpl getBox(Difficulty boxDiff) {
+    public BoxImpl getBox(Difficulty boxDiff) {
         if (boxDiff.getLevelName() == null) {
             return null;
         }

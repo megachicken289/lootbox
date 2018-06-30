@@ -5,7 +5,7 @@ package lootBoxes;
  */
 public enum Difficulty {
 	DIFFICULTY_NULL(    "NULL",                 0),  //,0.00, 0.00,  0.00,   0.00, 0.00, 0.00),    //  null
-	SLUTATIA(           "SLUTATIA",              1),  //,2.00, 0.05,  1.00,  10.00, 2.00, 2.00),    //   ^
+	SLUTATIA(           "SLUTATIA",             1),  //,2.00, 0.05,  1.00,  10.00, 2.00, 2.00),    //   ^
 	VERY_EASY(          "VERY_EASY",            2),  //,1.25, 0.25,  5.00,  25.00, 1.75, 1.75),    //   |
 	EASY(               "EASY",                 3),  //,1.50, 0.50, 10.00,  50.00, 1.50, 1.50),    // easier
 	BEGINNER(           "BEGINNER",             4),  //,1.75, 0.75, 15.00,  75.00, 1.25, 1.25),    //   |

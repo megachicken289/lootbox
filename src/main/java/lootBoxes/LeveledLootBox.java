@@ -1,15 +1,16 @@
 package lootBoxes;
 
-import utils.devUtils;
+import utils.DevUtils;
 
 /**
  * Created by Frank Borges XPTHQ on 6/11/2018.
  */
+
+// TODO: Fix calculation logic
 public class LeveledLootBox extends LootBox {
-	Difficulty  difficulty;
-	String      levelName;
-	int         levelNumber;
-	final int   NORMAL_BREAKS_THE_TIE = 5;
+	private String      levelName;
+	private int         levelNumber;
+	private final int   NORMAL_BREAKS_THE_TIE = 5;
 	
 	public LeveledLootBox(Difficulty difficulty) {
 		super(difficulty);
@@ -26,7 +27,7 @@ public class LeveledLootBox extends LootBox {
 		return levelNumber;
 	}
 	
-	public double calcRewards() {
+	public double getRewards() {
 		double rewardSize = levelNumber * 4;
 		// adjust appropriately
 		if (levelNumber >= NORMAL_BREAKS_THE_TIE) {
@@ -35,7 +36,7 @@ public class LeveledLootBox extends LootBox {
 		return rewardSize;
 	}
 	
-	public double calcLootBoxCost() {
+	public double getLootBoxCost() {
 		double cost = levelNumber * 8;
 		if (levelNumber >= NORMAL_BREAKS_THE_TIE) {
 			return cost * -1;
@@ -43,7 +44,7 @@ public class LeveledLootBox extends LootBox {
 		return cost;
 	}
 	
-	public double calcMinThresholdToWin() {
+	public double getMinThresholdToWin() {
 		double minThrshold = levelNumber * 2;
 		if (levelNumber >= NORMAL_BREAKS_THE_TIE) {
 			return minThrshold * -1;
@@ -51,7 +52,7 @@ public class LeveledLootBox extends LootBox {
 		return minThrshold;
 	}
 	
-	public double calcMaxThresholdToWin() {
+	public double getMaxThresholdToWin() {
 		double maxThreshold = levelNumber * 200;
 		if (levelNumber >= NORMAL_BREAKS_THE_TIE) {
 			return maxThreshold * -1;
@@ -59,7 +60,9 @@ public class LeveledLootBox extends LootBox {
 		return maxThreshold;
 	}
 	
-	public double calcChance() {
+	public double getChance() {
+		// chance goes against the player's luck
+		// random number
 		double chan = levelNumber * 0.1;
 		if (levelNumber >= NORMAL_BREAKS_THE_TIE) {
 			return chan * -1;
@@ -67,31 +70,11 @@ public class LeveledLootBox extends LootBox {
 		return chan;
 	}
 	
-	public double calcLuck() {
+	public double getLuck() {
 		double lu = levelNumber * 0.1;
 		if (levelNumber >= NORMAL_BREAKS_THE_TIE) {
 			return lu * -1;
 		}
 		return lu;
-	}
-	
-	@Override
-	public void showDevConsole() {
-		devUtils du = new devUtils();
-		du.showDevConsole(difficulty);
-	}
-	
-	@Override
-	public void showDevConsole2() {
-		devUtils du = new devUtils();
-		du.showDevConsole2(difficulty);
-	}
-	
-	public void define() {
-	
-	}
-	
-	public void play() {
-	
 	}
 }

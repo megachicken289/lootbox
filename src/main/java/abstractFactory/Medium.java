@@ -3,7 +3,7 @@ package abstractFactory;
 import lootBoxes.Difficulty;
 import lootBoxes.LeveledLootBox;
 
-public class Medium implements BaseBoxImpl
+public class Medium implements BoxImpl
 {
     LeveledLootBox llb = new LeveledLootBox(Difficulty.MEDIUM);
     FactoryUtils fu = new FactoryUtils();
@@ -17,5 +17,47 @@ public class Medium implements BaseBoxImpl
     public void showStats()
     {
         fu.boxStats(llb);
+    }
+
+    @Override
+    public void showHiddenStats()
+    {
+        fu.boxHiddenStats(llb);
+    }
+
+
+    @Override
+    public double boxReward()
+    {
+        return llb.getRewards();
+    }
+
+    @Override
+    public double boxCost() {
+        return llb.getLootBoxCost();
+    }
+
+    @Override
+    public double boxMinThreshold()
+    {
+        return llb.getMinThresholdToWin();
+    }
+
+    @Override
+    public double boxMaxThreshold()
+    {
+        return llb.getMaxThresholdToWin();
+    }
+
+    @Override
+    public double boxChance()
+    {
+        return llb.getChance();
+    }
+
+    @Override
+    public double boxLuck()
+    {
+        return llb.getLuck();
     }
 }

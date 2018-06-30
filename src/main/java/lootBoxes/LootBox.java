@@ -10,16 +10,10 @@ abstract class LootBox {
 		
 		this.difficulty = difficulty;
 	}
-	abstract public double calcRewards();
-	abstract public double calcLootBoxCost();
-	abstract public double calcMinThresholdToWin();
-	abstract public double calcMaxThresholdToWin();
-	abstract public double calcChance();
-	abstract public double calcLuck();
-	
-	abstract public void showDevConsole();
-	abstract public void define();
-	abstract public void play();
-	
-	public abstract void showDevConsole2();
+	abstract public double getRewards();
+	abstract public double getLootBoxCost();
+	abstract public double getMinThresholdToWin();
+	abstract public double getMaxThresholdToWin();
+	abstract public double getChance();
+	abstract public double getLuck();
 }

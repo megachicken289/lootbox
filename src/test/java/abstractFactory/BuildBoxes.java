@@ -15,7 +15,7 @@ public class BuildBoxes
     @Test
     public void testBuildSlutatia() throws Exception
     {
-        BaseBoxImpl box = boxFactory.getBox(Difficulty.SLUTATIA);
+        BoxImpl box = boxFactory.getBox(Difficulty.SLUTATIA);
 
         box.showStats();
     }
@@ -23,7 +23,7 @@ public class BuildBoxes
     @Test
     public void testBuildVeryEasy() throws Exception
     {
-        BaseBoxImpl box = boxFactory.getBox(Difficulty.VERY_EASY);
+        BoxImpl box = boxFactory.getBox(Difficulty.VERY_EASY);
 
         box.showStats();
     }
@@ -31,7 +31,7 @@ public class BuildBoxes
     @Test
     public void testBuildEasy() throws Exception
     {
-        BaseBoxImpl box = boxFactory.getBox(Difficulty.EASY);
+        BoxImpl box = boxFactory.getBox(Difficulty.EASY);
 
         box.showStats();
     }
@@ -39,7 +39,7 @@ public class BuildBoxes
     @Test
     public void testBuildMedium() throws Exception
     {
-        BaseBoxImpl box = boxFactory.getBox(Difficulty.MEDIUM);
+        BoxImpl box = boxFactory.getBox(Difficulty.MEDIUM);
 
         box.showStats();
     }
