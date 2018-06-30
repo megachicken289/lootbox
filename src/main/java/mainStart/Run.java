@@ -1,5 +1,7 @@
 package mainStart;
 
+import abstractFactory.BaseBoxImpl;
+import abstractFactory.BoxFactory;
 import lootBoxes.Difficulty;
 import lootBoxes.LeveledLootBox;
 import utils.StringUtils;
@@ -18,7 +20,18 @@ public class Run {
 		StringUtils.getPlayerYNInput("Do you want to lootbox");
 //		System.out.println("");
 		
-		String diffLvl = StringUtils.getPlayerInput("Which difficulty do you want");
+		Difficulty diffLvl = Difficulty.valueOf(StringUtils.getPlayerInputAsString("Which difficulty do you want"));
+		StringUtils.showChoiceMade(diffLvl.getLevelName());
+
+		BoxFactory boxFactory = new BoxFactory();
+		BaseBoxImpl box = boxFactory.getBox(diffLvl);
+
+		double playerPay = StringUtils.getPlayerInputAsDouble("How much would you like to pay: ");
+		StringUtils.showChoiceMade(playerPay);
+
+		box.buildBox();
+		box.showStats();		// used for testing purposes
+
 		// get diff number
 //		LeveledLootBox llb = new LeveledLootBox(Difficulty.valueOf(diffLvl));
 
@@ -34,7 +47,7 @@ public class Run {
 //		LeveledLootBox lootBox8 = new LeveledLootBox(Difficulty.BED_WETTER_DELIGHT);
 
 //		llb.showDevConsole();
-		du.showDevConsole2(Difficulty.valueOf(diffLvl));
+//		du.showDevConsole2(Difficulty.valueOf(diffLvl));
 //		lootBox.showDevConsole();
 //		lootBox0.showDevConsole();
 //		lootBox1.showDevConsole();

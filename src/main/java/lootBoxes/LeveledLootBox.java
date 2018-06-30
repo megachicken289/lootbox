@@ -17,6 +17,14 @@ public class LeveledLootBox extends LootBox {
 		this.levelName   = difficulty.getLevelName();
 		this.levelNumber = difficulty.getLevelNumber();
 	}
+
+	public String getLevelName(){
+		return levelName;
+	}
+
+	public int getLevelNumber() {
+		return levelNumber;
+	}
 	
 	public double calcRewards() {
 		double rewardSize = levelNumber * 4;

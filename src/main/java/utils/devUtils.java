@@ -40,4 +40,8 @@ public class devUtils {
 		System.out.println("[" + difficulty.getLevelNumber() + "] "
 				+ difficulty.getLevelName());
 	}
+
+	public void showDevConsole3(){
+
+    }
 }

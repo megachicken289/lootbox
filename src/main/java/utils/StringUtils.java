@@ -43,23 +43,40 @@ public class StringUtils {
 		return input.nextLine().toUpperCase();
 	}
 
-	public static String getPlayerInput(String str) {
+//	public static String getPlayerInput(String str, String type) {
+//		type = type.toUpperCase();
+//		switch (type) {
+//			case "S":
+//				System.out.println(str + ": ");
+//				return input.nextLine().toUpperCase();
+////			case "D":
+////				System.out.println(str + ": ");
+////				return input.nextDouble();
+//			default:
+//				return null;
+//		}
+//	}
+
+	public static String getPlayerInputAsString(String str) {
 		System.out.println(str + ": ");
 		return input.nextLine().toUpperCase();
 	}
 
-	public static int getPlayerInput(int integer) {
-		System.out.println(integer + ": ");
-		return input.nextInt();
-	}
-	
-	public static double getPlayerInput(double doub) {
-		System.out.println(doub + ": ");
+	public static double getPlayerInputAsDouble(String str) {
+		System.out.println(str + ": ");
 		return input.nextDouble();
 	}
-	
-	public static float getPlayerInput(float fl) {
-		System.out.println(fl + ": ");
+
+	public static int getPlayerInputAsFloat(String str) {
+		System.out.println(str + ": ");
 		return input.nextInt();
+	}
+
+	public static void showChoiceMade(String str) {
+		System.out.println("You have chosen: " + str);
+	}
+
+	public static void showChoiceMade(double doub) {
+		System.out.println("You have chosen: " + doub);
 	}
 }
