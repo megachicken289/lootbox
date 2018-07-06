@@ -29,7 +29,6 @@ public class BoxFactory
         } else if (boxDiff.getLevelName().equals("BED_WETTERS_DELIGHT")) {
             return new BedWetterDelight();
         }
-        //TODO: Add getLevelNumber
         return null;
     }
 }
