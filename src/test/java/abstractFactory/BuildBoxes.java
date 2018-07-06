@@ -43,4 +43,24 @@ public class BuildBoxes
 
         box.showStats();
     }
+    
+    @Test
+    public void testBuildBeginner() {
+    }
+    
+    @Test
+    public void testBuildHard() {
+    }
+    
+    @Test
+    public void testBuildLegendary() {
+    }
+    
+    @Test
+    public void testBuildIWantMyDaddy() {
+    }
+    
+    @Test
+    public void testBUildBedWetterDelight() {
+    }
 }
