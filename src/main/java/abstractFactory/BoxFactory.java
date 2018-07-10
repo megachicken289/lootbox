@@ -13,21 +13,21 @@ public class BoxFactory
             return null;
         }
         if (boxDiff.getLevelName().equals("SLUTATIA")) {
-            return new Slutatia();
+            return new BoxDifficultyController("SLUTATIA");
         } else if (boxDiff.getLevelName().equals("VERY_EASY")) {
-            return new VeryEasy();
+            return new BoxDifficultyController("VERY_EASY");
         } else if (boxDiff.getLevelName().equals("EASY")) {
-            return new Easy();
+            return new BoxDifficultyController("EASY");
         } else if (boxDiff.getLevelName().equals("MEDIUM")) {
-            return new Medium();
+            return new BoxDifficultyController("MEDIUM");
         } else if (boxDiff.getLevelName().equals("HARD")) {
-            return new Hard();
+            return new BoxDifficultyController("HARD");
         } else if (boxDiff.getLevelName().equals("LEGENDARY")) {
-            return new Legendary();
+            return new BoxDifficultyController("LEGENDARY");
         } else if (boxDiff.getLevelName().equals("I_WANT_MY_DADDY")) {
-            return new IWantMyDaddy();
+            return new BoxDifficultyController("I_WANT_MY_DADDY");
         } else if (boxDiff.getLevelName().equals("BED_WETTERS_DELIGHT")) {
-            return new BedWetterDelight();
+            return new BoxDifficultyController("BED_WETTERS_DELIGHT");
         }
         return null;
     }
