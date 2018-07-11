@@ -1,7 +1,6 @@
 package utils;
 
-import abstractFactory.BoxImpl;
-import lootBoxes.Difficulty;
+import games.lootboxGame.abstractFactory.BoxImpl;
 import player.PlayerUser;
 
 /**

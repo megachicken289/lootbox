@@ -1,8 +1,8 @@
 package utils;
 
-import lootBoxes.Difficulty;
-import lootBoxes.LeveledLootBox;
+import difficulty.Difficulty;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -18,7 +18,7 @@ public class StringUtils {
 
 	protected static Difficulty llb;
 	
-	public static String getPlayerYNInput(String str) {
+	private static String getPlayerYNInput(String str) {
 		Scanner input = new Scanner(System.in);
 		System.out.printf(str + " [Y/N]: ");
 		return input.nextLine().toUpperCase();
@@ -33,7 +33,7 @@ public class StringUtils {
 	}
 
 	public static boolean getPlayerChoiceAsYN(String str) {
-		String choice = getPlayerInputAsString(str);
+		String choice = getPlayerYNInput(str);
 		boolean checkChoice = choice.equals("YES") || choice.equals("Y") ||
 				choice.equals("NO") || choice.equals("N");
 		while (!checkChoice) {
@@ -63,16 +63,38 @@ public class StringUtils {
 		System.out.printf(str + ": ");
 		return input.nextLine().toUpperCase();
 	}
-
-	public static double getPlayerInputAsDouble(String str) {
+	
+	public static double getPlayerInputAsDouble(String str) throws InputMismatchException {
+		return getPlayerInputAsDouble(str,false);
+	}
+	
+	public static double getPlayerInputAsDouble(String str, boolean filterOut)
+			throws InputMismatchException {
 		Scanner input = new Scanner(System.in);
 		System.out.printf(str + ": ");
+		if (filterOut) {
+			// TODO: filter out everything but "." (DOT)
+			//super un-elegant, but it works for rn
+			return Double.valueOf(input.nextLine()
+	                        .replaceAll("[!@#$%^&*()_+{}<>?]", ""));
+//			return Double.valueOf(input.nextLine().replaceAll("[^a-zA-Z0-9]", ""));
+//			return Double.valueOf(input.nextLine().replaceAll("(\\p{Ll})\\.(\\p{Lu})", "$1.$2"));
+		}
+		
 		return input.nextDouble();
 	}
-
+	
 	public static int getPlayerInputAsInt(String str) {
+		return getPlayerInputAsInt(str,false);
+	}
+	
+	public static int getPlayerInputAsInt(String str, boolean filterOut) {
 		Scanner input = new Scanner(System.in);
 		System.out.printf(str + ": ");
+		if (filterOut) {
+			return Integer.valueOf(input.nextLine().replaceAll("[^a-zA-Z0-9]", ""));
+		}
+		
 		return input.nextInt();
 	}
 

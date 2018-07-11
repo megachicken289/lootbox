@@ -1,7 +1,7 @@
 package mainStart;
 
-import abstractFactory.BoxImpl;
-import abstractFactory.BoxFactory;
+import games.lootboxGame.abstractFactory.BoxImpl;
+import games.lootboxGame.abstractFactory.BoxFactory;
 import logic.GameEngine;
 import player.PlayerUser;
 
@@ -25,5 +25,9 @@ public class Run {
 
 		// play the lootbox
 		engine.play(player,box,boxFactory);
+	}
+	
+	public void runVendingMachine() {
+		player = new PlayerUser();
 	}
 }

@@ -1,8 +1,10 @@
-package abstractFactory;
+package games.lootboxGame.abstractFactory;
 
-import lootBoxes.Difficulty;
+import difficulty.Difficulty;
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.assertNotNull;
 
 public class BuildBoxes
 {
@@ -24,8 +26,8 @@ public class BuildBoxes
     public void testBuildVeryEasy() throws Exception
     {
         BoxImpl box = boxFactory.getBox(Difficulty.VERY_EASY);
-
-        box.showStats();
+        
+        assertNotNull(box);
     }
 
     @Test
@@ -62,5 +64,6 @@ public class BuildBoxes
     
     @Test
     public void testBUildBedWetterDelight() {
+        BoxImpl box = boxFactory.getBox(Difficulty.BED_WETTER_DELIGHT);
     }
 }

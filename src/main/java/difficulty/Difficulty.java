@@ -1,4 +1,4 @@
-package lootBoxes;
+package difficulty;
 
 /**
  * Created by Frank Borges XPTHQ on 6/11/2018.
@@ -13,7 +13,7 @@ public enum Difficulty {
 	HARD(               "HARD",                 6),  //,0.75, 1.25, 25.00, 125.00, 0.75, 0.75),    //   |
 	LEGENDARY(          "LEGENDARY",            7),  //,0.50, 1.50, 30.00, 150.00, 0.50, 0.50),    // harder
 	I_WANT_MY_DADDY(    "I_WANT_MY_DADDY",      8),  //,0.25, 1.75, 35.00, 175.00, 0.25, 0.25),    //   |
-	BED_WETTER_DELIGHT( "BED WETTER DELIGHT",   9);  //,0.05, 2.00, 40.00, 200.00, 0.05, 0.05);    //   v
+	BED_WETTER_DELIGHT( "BED_WETTER_DELIGHT",   9);  //,0.05, 2.00, 40.00, 200.00, 0.05, 0.05);    //   v
 	
 	private final String levelName;
 	private final int levelNumber;

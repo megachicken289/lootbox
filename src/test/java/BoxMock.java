@@ -1,8 +1,10 @@
-import abstractFactory.BoxFactory;
-import abstractFactory.BoxImpl;
-import lootBoxes.Difficulty;
+import games.lootboxGame.lootBoxes.BoxDifficultyController;
+import games.lootboxGame.abstractFactory.BoxFactory;
+import games.lootboxGame.abstractFactory.BoxImpl;
+import difficulty.Difficulty;
 
 public class BoxMock {
+	private BoxDifficultyController bdc;
 	private BoxFactory boxFactory;
 	private BoxImpl boxSlutatia;
 	private BoxImpl boxVEasy;
@@ -15,6 +17,7 @@ public class BoxMock {
 	private BoxImpl boxBWD;
 	
 	protected BoxMock() {
+		BoxImpl boxSlutatia0 = new BoxDifficultyController("SLUTATIA");
 		BoxImpl boxSlutatia = boxFactory.getBox(Difficulty.SLUTATIA);
 		BoxImpl boxVEasy = boxFactory.getBox(Difficulty.VERY_EASY);
 		BoxImpl boxEasy = boxFactory.getBox(Difficulty.EASY);

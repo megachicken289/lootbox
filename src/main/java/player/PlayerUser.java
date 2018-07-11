@@ -1,7 +1,7 @@
 package player;
 
-import abstractFactory.BoxImpl;
-import lootBoxes.Difficulty;
+import games.lootboxGame.abstractFactory.BoxImpl;
+import difficulty.Difficulty;
 
 public class PlayerUser
 {

@@ -1,10 +1,11 @@
-package abstractFactory;
+package games.lootboxGame.abstractFactory;
 
 public interface BoxImpl
 {
     void buildBox();
     void showStats();
     void showHiddenStats();
+    String boxDifficultyLevelName();
     double boxReward();         // tied to box
     double boxCost();           // tied to box
     double boxMinThreshold();   // tied to box

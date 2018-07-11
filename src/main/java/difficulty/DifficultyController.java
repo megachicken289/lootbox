@@ -1,4 +1,4 @@
-package lootBoxes;
+package difficulty;
 
 /**
  * Created by Frank Borges XPTHQ on 6/12/2018.

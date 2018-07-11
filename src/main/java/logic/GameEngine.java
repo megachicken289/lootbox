@@ -1,10 +1,10 @@
 package logic;
 
-import abstractFactory.BoxImpl;
-import abstractFactory.BoxFactory;
-import lootBoxes.Difficulty;
+import games.lootboxGame.lootBoxes.BoxDifficultyController;
+import games.lootboxGame.abstractFactory.BoxImpl;
+import games.lootboxGame.abstractFactory.BoxFactory;
+import difficulty.Difficulty;
 import player.PlayerUser;
-import utils.DevUtils;
 import utils.StringUtils;
 
 public class GameEngine
@@ -26,22 +26,24 @@ public class GameEngine
 			StringUtils.showChoiceMade(diffLvl.getLevelName());
 			player.setPlayerLevel(diffLvl);
 
-			box = boxFactory.getBox(diffLvl);
+//			box = boxFactory.getBox(diffLvl);
+			box = new BoxDifficultyController(diffLvl.toString());
 
 			box.buildBox();
-			box.showHiddenStats();        // used for testing purposes
+			box.showStats();        // used for testing purposes
 
 			// TODO: Make sure player pays minimum cost to play box level
-			double playerPay = StringUtils.getPlayerInputAsDouble("How much would you like to pay");
+			double playerPay = StringUtils.getPlayerInputAsDouble("How much would you like to pay",true);
 			StringUtils.showChoiceMade(playerPay, "$");
 			player.setPlayerLastPay(playerPay);
 			player.playerBoxDeposit(playerPay);
 
-			DevUtils.showPlayerMinMaxThresholdAgainstCostReward(player, box);    // used for testing purposes
+//			DevUtils.showPlayerMinMaxThresholdAgainstCostReward(player, box);    // used for testing purposes
+			box.showStats();
 
 			doDaPlayaWin(player,box,boxFactory);
-//			System.out.println("PLAYER IS A: " + (player.isPlayerWinner()?"WINNER":"LOSER"));
-			System.out.println("PLayer is a: " + player.isPlayerWinner());
+			System.out.println("PLAYER IS A: " + (player.isPlayerWinner()?"WINNER":"LOSER"));
+//			System.out.println("PLayer is a: " + player.isPlayerWinner());
 			if (player.isPlayerWinner()) {
 				reset(player);
 			}

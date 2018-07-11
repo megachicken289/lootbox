@@ -1,5 +1,6 @@
-package lootBoxes;
+package games.lootboxGame.lootBoxes;
 
+import difficulty.Difficulty;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
