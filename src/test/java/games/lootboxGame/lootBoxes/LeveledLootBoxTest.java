@@ -44,18 +44,18 @@ public class LeveledLootBoxTest {
 	@Test
 	public void lootboxCostTest() {
 		
-		assertNotNull(lb_null.getLootBoxCost());
-		assertEquals(   1*8, lb_slutatia.getLootBoxCost(),0);
-		assertEquals(   2*8, lb_very_easy.getLootBoxCost(),0);
-		assertEquals(   2*8, lb_very_easy_spot_check.getLootBoxCost(),0);
-		assertEquals(  3*8, lb_easy.getLootBoxCost(),0);
-		assertEquals(  4*8, lb_beginner.getLootBoxCost(),0);
-		assertEquals(  -1*5*8, lb_medium.getLootBoxCost(),0);
-		assertEquals( -1*6*8, lb_hard.getLootBoxCost(),0);
-		assertEquals( -1*6*8, lb_hard_spot_check.getLootBoxCost(),0);
-		assertEquals( -1*7*8, lb_legendary.getLootBoxCost(),0);
-		assertEquals(-1*8*8, lb_IWMD.getLootBoxCost(),0);
-		assertEquals( -1*9*8,lb_hardest.getLootBoxCost(),0);
+		assertNotNull(lb_null.getCost());
+		assertEquals(   1*8, lb_slutatia.getCost(),0);
+		assertEquals(   2*8, lb_very_easy.getCost(),0);
+		assertEquals(   2*8, lb_very_easy_spot_check.getCost(),0);
+		assertEquals(  3*8, lb_easy.getCost(),0);
+		assertEquals(  4*8, lb_beginner.getCost(),0);
+		assertEquals(  -1*5*8, lb_medium.getCost(),0);
+		assertEquals( -1*6*8, lb_hard.getCost(),0);
+		assertEquals( -1*6*8, lb_hard_spot_check.getCost(),0);
+		assertEquals( -1*7*8, lb_legendary.getCost(),0);
+		assertEquals(-1*8*8, lb_IWMD.getCost(),0);
+		assertEquals( -1*9*8,lb_hardest.getCost(),0);
 		
 	}
 	@Test

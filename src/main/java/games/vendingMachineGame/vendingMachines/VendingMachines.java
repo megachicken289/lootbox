@@ -10,7 +10,7 @@ abstract class VendingMachines {
 	}
 	abstract double getRewards();           // probably should be a string
 											// because you get items, not cash
-	abstract double getVendingCost();
+	abstract double getCost();
 //	abstract double getMinThresholdToWin();
 //	abstract double getMaxThresholdToWin();
 //	abstract double getChance();

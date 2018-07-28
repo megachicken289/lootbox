@@ -2,6 +2,8 @@ package mainStart;
 
 import games.lootboxGame.abstractFactory.BoxImpl;
 import games.lootboxGame.abstractFactory.BoxFactory;
+import games.vendingMachineGame.abstractFactory.VendingFactory;
+import games.vendingMachineGame.abstractFactory.VendingMachineImpl;
 import logic.GameEngine;
 import player.PlayerUser;
 
@@ -10,10 +12,16 @@ import player.PlayerUser;
  */
 public class Run {
 	private PlayerUser player;
+	private GameEngine engine;
+	
+	// lootbox
 	private BoxFactory boxFactory;
 	private BoxImpl box;
-	private GameEngine engine;
 
+	// vending machine
+	private VendingFactory vendingFactory;
+	private VendingMachineImpl vendMach;
+	
 	public void init() {
 
 	}
@@ -24,7 +32,17 @@ public class Run {
 		engine = new GameEngine();
 
 		// play the lootbox
-		engine.play(player,box,boxFactory);
+		engine.playBox(player,box,boxFactory);
+	}
+	
+	public void runTheVendingMachine() {
+		player = new PlayerUser();
+		vendingFactory = new VendingFactory();
+		engine = new GameEngine();
+		
+		// play the vending
+		// TODO: IMPLEMENT
+//		engine.playBox(player,vendMach,vendingFactory);
 	}
 	
 	public void runVendingMachine() {

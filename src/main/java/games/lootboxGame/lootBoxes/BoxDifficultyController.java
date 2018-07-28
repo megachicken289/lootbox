@@ -20,7 +20,7 @@ public class BoxDifficultyController implements BoxImpl {
 	public void buildBox() {
 		llb.getLevelName();
 		llb.getRewards();
-		llb.getLootBoxCost();
+		llb.getCost();
 		llb.getMinThresholdToWin();
 		llb.getMaxThresholdToWin();
 		llb.getChance();
@@ -38,7 +38,7 @@ public class BoxDifficultyController implements BoxImpl {
 		                  "LUCK:        %8.2f%n%n",
 		                  llb.getLevelName(),
 		                  llb.getRewards(),
-		                  llb.getLootBoxCost(),
+		                  llb.getCost(),
 		                  llb.getLuck());
 	}
 	
@@ -56,7 +56,7 @@ public class BoxDifficultyController implements BoxImpl {
 		                  "LUCK:            %8.2f%n%n",
 		                  llb.getLevelName(),
 		                  llb.getRewards(),
-		                  llb.getLootBoxCost(),
+		                  llb.getCost(),
 		                  llb.getMinThresholdToWin(),
 		                  llb.getMaxThresholdToWin(),
 		                  llb.getChance(),
@@ -75,7 +75,7 @@ public class BoxDifficultyController implements BoxImpl {
 	
 	@Override
 	public double boxCost() {
-		return llb.getLootBoxCost();
+		return llb.getCost();
 	}
 	
 	@Override

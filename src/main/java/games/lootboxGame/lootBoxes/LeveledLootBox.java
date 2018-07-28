@@ -36,7 +36,7 @@ class LeveledLootBox extends LootBox {
 		return rewardSize;
 	}
 	
-	protected double getLootBoxCost() {
+	protected double getCost() {
 		double cost = levelNumber * 8;
 		if (levelNumber >= NORMAL_BREAKS_THE_TIE) {
 			return cost * -1;

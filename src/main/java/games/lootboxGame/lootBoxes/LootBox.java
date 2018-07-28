@@ -13,7 +13,7 @@ abstract class LootBox {
 		this.difficulty = difficulty;
 	}
 	abstract double getRewards();
-	abstract double getLootBoxCost();
+	abstract double getCost();
 	abstract double getMinThresholdToWin();
 	abstract double getMaxThresholdToWin();
 	abstract double getChance();

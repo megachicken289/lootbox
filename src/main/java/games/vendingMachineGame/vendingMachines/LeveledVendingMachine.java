@@ -26,11 +26,17 @@ class LeveledVendingMachine extends VendingMachines {
 	
 	@Override
 	double getRewards() {
-		return 0;
+		// TODO: ADD/IMPLEMENT 3x3 array
+		double reward = levelNumber * 4;
+		// adjust appropriately
+		if (levelNumber >= NORMAL_BREAKS_THE_TIE) {
+			return reward * -1;
+		}
+		return reward;
 	}
 	
 	@Override
-	double getVendingCost() {
+	double getCost() {
 		return 0;
 	}
 }

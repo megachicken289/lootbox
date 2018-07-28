@@ -20,7 +20,7 @@ public class VendingMachineDifficultyController implements VendingMachineImpl {
 		lvm.getLevelName();
 		lvm.getLevelNumber();
 		lvm.getRewards();
-		lvm.getVendingCost();
+		lvm.getCost();
 	}
 	
 	@Override
@@ -45,6 +45,6 @@ public class VendingMachineDifficultyController implements VendingMachineImpl {
 	
 	@Override
 	public double vendingMachineCost() {
-		return lvm.getVendingCost();
+		return lvm.getCost();
 	}
 }
